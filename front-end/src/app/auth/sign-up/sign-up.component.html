@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <input class="signup-input" type="text" placeholder="Username" formControlName="username">
+    <input class="signup-input" type="text" placeholder="Password" formControlName="password">
+
+    <div class="btn-container">
+        <button class="submit-btn">
+            Sign up
+        </button>
+    </div>
+</form>

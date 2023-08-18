@@ -1,0 +1,34 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="header">
+    <h2 class="collection-header">Bags</h2>
+</div>
+
+<div class="btn-container">
+    <h4 class="btn">Dress</h4>
+    <h4 class="btn">Tops</h4>
+    <h4 class="btn">Bottoms</h4>
+    <h4 class="btn">Jeans</h4>
+</div>
+
+<div class="product-list-container">
+    <div class="product-list"  [routerLink]="['dress']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Clothing/Dress-removebg-preview_6bJvzf4e8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842292113" alt="">
+        <h5 class="product-list-text">Dress</h5>
+    </div>
+    <div class="product-list" [routerLink]="['tops']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Clothing/tops-removebg-preview_Z78q9J_wQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842291963" alt="">
+        <h5 class="product-list-text">Tops</h5>
+    </div>
+    <div class="product-list" [routerLink]="['bottoms']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Clothing/Bottoms-removebg-preview_mylpr4arL.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842291961" alt="">
+        <h5 class="product-list-text">Bottoms</h5>
+    </div>
+    <div class="product-list"  [routerLink]="['jeans']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Clothing/00469535-01-removebg-preview_D6KYgUaZ0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842291941" alt="">
+        <h5 class="product-list-text">Jeans</h5>
+    </div> 
+    
+</div>

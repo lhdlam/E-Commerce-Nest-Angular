@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input class="login-input" type="text" placeholder="Username" formControlName="username">
+    <input class="login-input" type="text" placeholder="Password" formControlName="password">
+
+    <div class="btn-container">
+        <button class="submit-btn">
+            Log in
+        </button>
+    </div>
+</form>

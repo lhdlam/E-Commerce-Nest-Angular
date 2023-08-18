@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <input class="product-input" placeholder="Title" type="text" formControlName="title">
+    <input class="product-input" placeholder="Description" type="text" formControlName="description">
+    <input class="product-input" placeholder="imgUrl1" type="text" formControlName="imgUrl1">
+    <input class="product-input" placeholder="Price" type="text" formControlName="price">
+    <input class="product-input" placeholder="Quantity" type="text" formControlName="quantity">
+    <input class="product-input" placeholder="Size" type="text" formControlName="size">
+    <input class="product-input" placeholder="Color" type="text" formControlName="color">
+    <input class="product-input" placeholder="Shippings" type="text" formControlName="shippings">
+    <input class="product-input" placeholder="Sex" type="text" formControlName="sex">
+    <input class="product-input" placeholder="Brands" type="text" formControlName="brands">
+    <input class="product-input" placeholder="Category" type="text" formControlName="category">
+    <input class="product-input" placeholder="Subcategory" type="text" formControlName="subcategory">
+
+    <div class="btn-container">
+        <button class="submit-btn">
+            Submit
+        </button>
+    </div>
+   
+</form>
+
+<div class="btn-container" [routerLink]="['/']">
+    <button class="submit-btn">
+        Home
+    </button>
+</div>

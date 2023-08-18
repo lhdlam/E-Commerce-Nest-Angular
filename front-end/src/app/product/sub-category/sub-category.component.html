@@ -1,0 +1,55 @@
+<!-- <div class="nav-bar">
+    <div class="nav-bar-cart">
+        <i class='bx bx-cart bx-sm'></i>
+    </div>
+    <div class="nav-bar-logo">
+        LOGO
+    </div>
+    <div class="nav-bar-menu">
+        <i class='bx bx-menu bx-sm'></i>
+    </div>
+</div> -->
+
+<app-navbar></app-navbar>
+
+<!-- <div>
+    <img class="banner" src="https://ik.imagekit.io/bprw8mk45/products/bag_banner_EX3kwvE0J000_RT_4unaVA.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663054195897" alt="">
+</div> -->
+
+<div class="header">
+    <h2 class="collection-header">{{routeName | titleTransform}}</h2>
+</div>
+
+
+<div class="content-container" *ngIf="subProducts !== undefined; else elseBlock">
+    <div class="best-seller-container">
+        <h3 class="collection-title">
+            Best seller this week
+        </h3>
+        <img class="best-img" src="https://ik.imagekit.io/bprw8mk45/products/0fc463d91c76303a1b84c63381734a15_yN2NdtEqC.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663063520515" alt="">
+        <h5 class="best-seller-t">Contrast Binding Flap Bag</h5>
+        <h5 class="best-seller-p">$39.99</h5>
+    </div>
+    <div class="product-list-container" >
+        <div class="product-list" *ngFor="let product of subProducts">
+            <div class="product-container" [routerLink]="['/detail', product.id]">
+                <img class="product-img" [src]="product.imgUrl1" alt="">
+                <h5 class="product-list-text">{{product.brands}}</h5>
+            </div>
+            <h5 class="product-list-text">{{product.title}}</h5>
+            
+
+            <button *ngIf="isUserAuthenticated" (click)="deleteProduct(product.id)">Delete</button>
+            <button *ngIf="isUserAuthenticated" [routerLink]="['/edit', product.id]">Edit</button>
+        </div>
+    </div>
+
+</div>
+   
+<ng-template #elseBlock>No product found</ng-template>
+
+    
+    
+
+
+

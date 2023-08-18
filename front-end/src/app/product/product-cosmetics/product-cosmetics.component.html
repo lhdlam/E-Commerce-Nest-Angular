@@ -1,0 +1,33 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="header">
+    <h2 class="collection-header">Cosmetics</h2>
+</div>
+
+<div class="btn-container">
+    <h4 class="btn">Face</h4>
+    <h4 class="btn">Eye</h4>
+    <h4 class="btn">Lip</h4>
+    <h4 class="btn">Cheek</h4>
+</div>
+
+<div class="product-list-container">
+    <div class="product-list"  [routerLink]="['face']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Cosmetics/Face-removebg-preview_ObJT1Wo9l.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842006849" alt="">
+        <h5 class="product-list-text">Face</h5>
+    </div>
+    <div class="product-list" [routerLink]="['eyes']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Cosmetics/EYE-removebg-preview_YyYEW6iCu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842006937" alt="">
+        <h5 class="product-list-text">Eye</h5>
+    </div>    
+    <div class="product-list" [routerLink]="['lips']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Cosmetics/Lip-removebg-preview_w5S7DqgYZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842005773" alt="">
+        <h5 class="product-list-text">Lip</h5>
+    </div>    
+    <div class="product-list" [routerLink]="['cheeks']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Cosmetics/Cheek-removebg-preview_58wcTK75ts.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842006913" alt="">
+        <h5 class="product-list-text">Cheek</h5>
+    </div>    
+</div>

@@ -1,0 +1,23 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="header">
+    <h2 class="collection-header">Accessories</h2>
+</div>
+
+<div class="btn-container">
+    <h4 class="btn">Shoes</h4>
+    <h4 class="btn">Jewelry</h4>
+</div>
+
+<div class="product-list-container">
+    <div class="product-list" [routerLink]="['shoes']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Accessories/Shoes-removebg-preview_bpw3Z7RDh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663842072295" alt="">
+        <h5 class="product-list-text">Shoes</h5>
+    </div>
+    <div class="product-list" [routerLink]="['jewelry']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/Accessories/Jewelry_gO6KFc4IZn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663841446433" alt="">
+        <h5 class="product-list-text">Jewelry</h5>
+    </div>    
+</div>

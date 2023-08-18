@@ -1,0 +1,70 @@
+<!-- <div class="nav-bar">
+    <div class="nav-bar-cart">
+        <i class='bx bx-cart bx-sm'></i>
+    </div>
+    <div class="nav-bar-logo">
+        LOGO
+    </div>
+    <div class="nav-bar-menu">
+        <i class='bx bx-menu bx-sm'></i>
+    </div>
+</div>
+ -->
+
+<app-navbar></app-navbar>
+
+
+    <div class="header">
+        <h2 class="collection-header">New collection <br> Spring 2023</h2>
+        <i class='bx bxs-chevron-down-circle bx-lg'></i>
+    </div>
+    
+
+    <div class="desktop-view">
+    
+        <div class="lang-img-container">
+            <img class="land-img"
+                src="https://ik.imagekit.io/bprw8mk45/products/Screen_Shot_2022-06-01_at_1.04.22_AM_lU5uC-XyW.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654017473198"
+                alt="">
+        </div>
+
+
+        <div class="btn-container">
+            <h4 class="btn">Bags</h4>
+            <h4 class="btn">Cosmetics</h4>
+            <h4 class="btn">Clothing</h4>
+            <h4 class="btn">Accessories</h4>
+        </div>
+    
+        <div class="product-list-container">
+            <div class="product-list" [routerLink]="['/bags']">
+                <img class="product-img"
+                    src="https://ik.imagekit.io/bprw8mk45/products/bags_300_vKpy1UGw8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653603859448"
+                    alt="">
+                <h5 class="product-list-text">Bags</h5>
+            </div>
+            <div class="product-list" [routerLink]="['/cosmetics']">
+                <img class="product-img"
+                    src="https://ik.imagekit.io/bprw8mk45/products/cosmetics_300_r6I3RrHzI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653603897058"
+                    alt="">
+                <h5 class="product-list-text">Cosmetics</h5>
+            </div>
+            <div class="product-list"  [routerLink]="['/clothing']">
+                <img class="product-img"
+                    src="https://ik.imagekit.io/bprw8mk45/products/dress_300_dzbEB-OXo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653603907641"
+                    alt="">
+                <h5 class="product-list-text">Clothing</h5>
+            </div>
+            <div class="product-list"  [routerLink]="['/accessories']">
+                <img class="product-img"
+                    src="https://ik.imagekit.io/bprw8mk45/products/watch_300_dhrkYkJXJ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653603911579"
+                    alt="">
+                <h5 class="product-list-text">Accessories</h5>
+            </div>
+        </div>
+    
+    </div>
+    
+
+
+

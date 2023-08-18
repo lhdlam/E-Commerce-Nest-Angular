@@ -1,0 +1,74 @@
+<!-- <div *ngIf="openMenu" [ngClass]="{'mobileMenu': openMenu}">
+    <div>
+        <i 
+            *ngIf="openMenu" 
+            (click)="toggleMenu()" 
+            class='bx bx-x bx-lg menu-close' 
+            style="color: rgb(31, 31, 31)"></i>
+    </div>
+    <ul>
+        <li><a>My cart</a></li>
+        <li><a>Bags</a></li>
+        <li><a>Makeup</a></li>
+        <li><a>Clothing</a></li>
+        <li><a>Accessories</a></li>
+        <li><a>About us</a></li>
+        <li><a>Contact</a></li>
+    </ul>
+</div>
+
+<div class="nav-bar">
+    <div class="nav-bar-logo">
+        <img class="logo-img" src="https://ik.imagekit.io/bprw8mk45/products/a%CC%82__Pngtreea%CC%82__creative_company_logo_1197025_LuZ_u5Kgi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663302070049" alt="">
+    </div>
+   
+    <ul class="menu-items">
+        <li>Cart</li>
+        <li>bags</li>
+        <li>Cosmetics</li>
+        <li>Dress</li>
+        <li>Accessories</li>
+    </ul>
+
+    <div class="nav-bar-menu" (click)="toggleMenu()">
+        <i class='bx bx-menu bx-lg' style='color: white'></i>
+    </div>
+</div> -->
+
+<app-navbar></app-navbar>
+
+<!-- <div [ngClass]="{'hideText': openMenu}">
+    Hello World
+</div> -->
+
+
+<div class="header">
+    <h2 class="collection-header">Bags</h2>
+</div>
+
+<div class="btn-container">
+    <h4 class="btn">Purses</h4>
+    <h4 class="btn">Designer Bags</h4>
+    <h4 class="btn">Shoulder bags</h4>
+    <h4 class="btn">Travel Bags</h4>
+</div>
+
+<div class="product-list-container">
+    <div class="product-list" [routerLink]="['purse']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/bags/purse-removebg-preview_Dg2F0Tc4V.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653660837379" alt="">
+        <h5 class="product-list-text">Purses</h5>
+    </div>
+    <div class="product-list" [routerLink]="['designerbags']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/bags/21789859-1-nero-removebg-preview_wgW5IS-k3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653660805466" alt="">
+        <h5 class="product-list-text">Designer Bags</h5>
+    </div>
+    <div class="product-list" [routerLink]="['shoulderbags']">
+        <img class="product-img" src="https://ik.imagekit.io/bprw8mk45/products/bags/201868254-1-black_2b00csX-_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653660806986" alt="">
+        <h5 class="product-list-text">Shoulder bags</h5>
+    </div>
+    <div class="product-list">
+        <img class="product-img" [routerLink]="['travelbags']" src="https://ik.imagekit.io/bprw8mk45/products/bags/202649543-1-pink-removebg-preview_VSV6qfVeQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653660786099" alt="">
+        <h5 class="product-list-text">Travel bags</h5>
+    </div> 
+    
+</div>

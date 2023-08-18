@@ -1,0 +1,33 @@
+input[type=text] {
+    padding: 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border: #c2c2c2 solid 1px;
+    border-radius: 5px;
+    display: block;
+    width: 80%;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.submit-btn {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: #7B0606;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 14px 110px 14px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 1rem auto;
+}

@@ -1,0 +1,67 @@
+
+<!-- 
+
+<div class="nav-bar">
+    <div class="nav-bar-cart">
+        <i class='bx bx-cart bx-sm'></i>
+    </div>
+    <div class="nav-bar-logo">
+        LOGO
+    </div>
+    <div class="nav-bar-menu">
+        <i class='bx bx-menu bx-sm'></i>
+    </div>
+</div> -->
+
+<app-navbar></app-navbar>
+
+<!-- <div>
+    <img class="banner" src="https://ik.imagekit.io/bprw8mk45/products/bag_banner_EX3kwvE0J000_RT_4unaVA.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663054195897" alt="">
+</div> -->
+
+<div *ngIf="product">
+    
+    
+    <div class="product-list-container">
+        <div class="header">
+            <h4 class="collection-header">{{product.brands}}</h4>
+        </div>
+        <div class="product-list">
+            <img class="product-img" [src]="product.imgUrl1" alt="">
+        </div>
+        <div class="product-price">
+            {{product.price | currency: 'USD'}}
+        </div>
+        <div class="product-info">
+            {{product.description}}
+        </div>
+    </div>
+
+    <div class="lower-display">
+        <!-- <div class="buy-btn-container">
+            <button class="buy-btn">
+                Buy now
+            </button>
+        </div> -->
+
+        
+
+        <carousel
+        [images]="images"
+        [height]=90
+        [width]=230
+        [counter]="true"
+        [arrowsOutside]="true"
+        class="carousel-container"
+        >
+        </carousel>
+    </div>
+</div>
+
+<div class="paypal-btn">
+    <div  #paypal></div>
+</div>
+
+
+
+
