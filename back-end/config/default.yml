@@ -1,0 +1,14 @@
+server:
+  port: 3008
+db: 
+  type: 'postgres'
+  host: 'localhost'
+  port: 5432
+  username: 'postgres'
+  password: 'postgres'
+  database: 'e-commerce'
+  synchronize: true
+
+jwt:
+  expiresIn: 3600
+  secret: 'secretKey'
