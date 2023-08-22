@@ -1,0 +1,29 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="header">
+    <h2 class="collection-header">Travel</h2>
+</div>
+
+<div class="btn-container">
+    <h4 class="btn">Trolley</h4>
+    <h4 class="btn">Hard Shell Luggage</h4>
+    <h4 class="btn">Accessories</h4>
+
+</div>
+
+<div class="product-list-container">
+    <div class="product-list" [routerLink]="['trolley']">
+        <img class="product-img" src="https://ik.imagekit.io/2wqbt8w6k/Product/451003_FABGN_1000_002_100_0000_Light-Jumbo-GG-small-cabin-trolley.avif?updatedAt=1692590570960" alt="">
+        <h5 class="product-list-text">Trolley</h5>
+    </div>
+    <div class="product-list" [routerLink]="['luggage']">
+        <img class="product-img" src="https://ik.imagekit.io/2wqbt8w6k/Product/611642_2YGAT_8358_001_074_0000_Light-Gucci-Savoy-medium-suitcase-with-Web.avif?updatedAt=1692590570891" alt="">
+        <h5 class="product-list-text">Hard Shell Luggage</h5>
+    </div>    
+    <div class="product-list" [routerLink]="['accessories']">
+        <img class="product-img" src="https://ik.imagekit.io/2wqbt8w6k/Product/740505_9AACH_8170_001_050_0000_Light-Gucci-Porter-beauty-case.avif?updatedAt=1692590570977" alt="">
+        <h5 class="product-list-text">Accessories</h5>
+    </div>  
+</div>

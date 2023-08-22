@@ -12,6 +12,7 @@ import { ProductEditComponent } from "./product-edit/product-edit.component";
 
 import { ProductHomeComponent } from "./product-home/product-home.component";
 import { SubCategoryComponent } from "./sub-category/sub-category.component";
+import { ProductTravelComponent } from "./product-travel/product-travel.component";
 
 const routes: Routes = [
     {
@@ -59,6 +60,16 @@ const routes: Routes = [
         path: 'cosmetics/:id',
         component: SubCategoryComponent
     },
+
+    {
+        path: 'travel',
+        component: ProductTravelComponent
+    },
+    {
+        path: 'travel/:id',
+        component: SubCategoryComponent
+    },
+
     {
         path: 'detail/:id',
         component: ProductDetailComponent

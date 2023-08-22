@@ -19,34 +19,34 @@ export class UsersService {
     @InjectRepository(UserEntity)
     private userRepository: Repository<UserEntity>,
     @InjectEntityManager() private postManager: EntityManager
-  ) {}
+  ) { }
 
   async create(createUserDto: CreateUserDto) {
     let newUser: any = {}
-    const {password} = createUserDto
+    const { password } = createUserDto
     let salt = await bcrypt.genSaltSync(10);
-    let hashPassword = await bcrypt.hashSync(password, salt);  
+    let hashPassword = await bcrypt.hashSync(password, salt);
     console.log('hashPassword', hashPassword)
 
     createUserDto.username && (newUser.username = createUserDto.username)
     hashPassword && (newUser.password = hashPassword);
-    if(createUserDto.roles){
+    if (createUserDto.roles) {
       newUser.roles = createUserDto.roles
     }
-    else{
+    else {
       newUser.roles = Role.Member
     }
 
     console.log('newUser', newUser)
     let newSaveUser = await this.userRepository.create({
       ...newUser
-    }) 
+    })
 
     await this.userRepository.save(newSaveUser)
 
     return newSaveUser
 
-}
+  }
 
   findAll() {
     return `This action returns all users`;
@@ -55,22 +55,22 @@ export class UsersService {
   async findOne(testName: any) {
     const userWithEntityManager = await this.postManager
       .createQueryBuilder(UserEntity, "user")
-      .where("user.username= :name", {name: testName})
+      .where("user.username= :name", { name: testName })
       .getOne()
 
-      if (!userWithEntityManager) {
-        throw new HttpException('Wrong username or password', HttpStatus.NOT_FOUND)
-      }
+    if (!userWithEntityManager) {
+      throw new HttpException('Wrong username or password', HttpStatus.NOT_FOUND)
+    }
 
-      // console.log('userWithEntityManager', userWithEntityManager)
+    // console.log('userWithEntityManager', userWithEntityManager)
 
-      return userWithEntityManager;
+    return userWithEntityManager;
   }
 
   async findUserRoleByUserId(id: any) {
     const user = await this.userRepository.findOne(id)
 
-    if(!user) {
+    if (!user) {
       throw new HttpException('No user found by Id', HttpStatus.NOT_FOUND)
     }
 
@@ -93,7 +93,7 @@ export class UsersService {
     try {
       let decoded: any = jwt.verify(token, jwtContants.secret)
 
-      if(!decoded) {
+      if (!decoded) {
         throw new HttpException('Not authorized', HttpStatus.NOT_FOUND)
       }
 
@@ -102,19 +102,22 @@ export class UsersService {
       if (!user) {
         throw new HttpException('No user', HttpStatus.NOT_FOUND)
       }
-
+      var result = ''
       if (user) {
-        if (user.roles && user.roles === 'admin') {
-          return JSON.stringify('Authorized')
-        } else {
-          throw new HttpException('Not authorized', HttpStatus.NOT_FOUND)
+        if (user.roles) {
+          var result = 'Login'
         }
+        if (user.roles === 'admin') {
+          var result = 'Authorized'
+        }
+        return JSON.stringify(result)
+      } else {
+        throw new HttpException('Not authorized', HttpStatus.NOT_FOUND)
       }
-    } catch (err) {
+    }
+    catch (err) {
       console.log('error', err)
       return err
     }
-
   }
-
 }

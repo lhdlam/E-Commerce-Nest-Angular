@@ -14,8 +14,14 @@
         <li><a>Accessories</a></li>
         <li><a>About us</a></li>
         <li><a>Contact</a></li>
-        <li [routerLink]="['/auth/login']"><a>Login</a></li>
+        <!-- <li *ngIf="isLogin" [routerLink]="['/auth/logout']"><a>Logout</a></li>
+        <li [routerLink]="['/auth/login']"><a>Login</a></li> -->
+
+        <li *ngIf="isLogin; else notLoggedIn"><a (click)="logout()">Logout</a></li>
+        <ng-template #notLoggedIn><li><a [routerLink]="['/auth/login']">Login</a></li></ng-template>
+        
         <li *ngIf="isUserAuthenticated" [routerLink]="['/create']"><a>Create Product</a></li>
+
         
     </ul>
 </div>

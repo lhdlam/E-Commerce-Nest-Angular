@@ -16,6 +16,7 @@ import { ProductCosmeticsComponent } from './product-cosmetics/product-cosmetics
 import { ProductAccessoriesComponent } from './product-accessories/product-accessories.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductTravelComponent } from './product-travel/product-travel.component';
 
 
 
@@ -36,6 +37,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     ProductAccessoriesComponent,
     ProductCreateComponent,
     ProductEditComponent,
+    ProductTravelComponent,
   ],
   imports: [
     CommonModule,
