@@ -14,6 +14,9 @@ $ cd ./frontend
 $ npm start
 #Start the frontend server and open browser on http://localhost:4200/.
 ```
+**Image**
+`[imagekit.io](https://imagekit.io/)`
+
 *Desktop view*
 <img src="https://ik.imagekit.io/2wqbt8w6k/Product/home.png?updatedAt=1692762803673">
 
