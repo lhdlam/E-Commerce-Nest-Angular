@@ -8,12 +8,12 @@
     </div>
     <ul>
         <li><a>My cart</a></li>
-        <li><a>Bags</a></li>
-        <li><a>Makeup</a></li>
-        <li><a>Clothing</a></li>
-        <li><a>Accessories</a></li>
-        <li><a>About us</a></li>
-        <li><a>Contact</a></li>
+        <li><a [routerLink]="['/bags']">Bags</a></li>
+        <li><a [routerLink]="['/cosmetics']">Makeup</a></li>
+        <li><a [routerLink]="['/clothing']">Clothing</a></li>
+        <li><a [routerLink]="['/accessories']">Accessories</a></li>
+        <li><a [routerLink]="['/about-us']">About us</a></li>
+        <li><a [routerLink]="['/contact']">Contact</a></li>
         <!-- <li *ngIf="isLogin" [routerLink]="['/auth/logout']"><a>Logout</a></li>
         <li [routerLink]="['/auth/login']"><a>Login</a></li> -->
 
@@ -32,11 +32,17 @@
     </div>
    
     <ul class="menu-items">
-        <li>Cart</li>
-        <li>bags</li>
-        <li>Cosmetics</li>
-        <li>Dress</li>
-        <li>Accessories</li>
+        <li><a>My cart</a></li>
+        <li [routerLink]="['/bags']"><a>Bags</a></li>
+        <li [routerLink]="['/cosmetics']"><a>Makeup</a></li>
+        <li [routerLink]="['/clothing']"><a>Clothing</a></li>
+        <li [routerLink]="['/accessories']"><a>Accessories</a></li>
+        <li [routerLink]="['/about-us']"><a>About us</a></li>
+        <li [routerLink]="['/contact']"><a >Contact</a></li>
+        <li *ngIf="isLogin; else notLoggedIn"><a (click)="logout()">Logout</a></li>
+        <ng-template #notLoggedIn><li [routerLink]="['/auth/login']"><a>Login</a></li></ng-template>
+        
+        <li *ngIf="isUserAuthenticated" [routerLink]="['/create']"><a>Create Product</a></li>
     </ul>
 
     <div class="nav-bar-menu" (click)="toggleMenu()">

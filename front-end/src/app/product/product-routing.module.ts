@@ -13,6 +13,8 @@ import { ProductEditComponent } from "./product-edit/product-edit.component";
 import { ProductHomeComponent } from "./product-home/product-home.component";
 import { SubCategoryComponent } from "./sub-category/sub-category.component";
 import { ProductTravelComponent } from "./product-travel/product-travel.component";
+import { AboutUsComponent } from "./shared/about-us/about-us.component";
+import { ContactComponent } from "./shared/contact/contact.component";
 
 const routes: Routes = [
     {
@@ -73,6 +75,16 @@ const routes: Routes = [
     {
         path: 'detail/:id',
         component: ProductDetailComponent
+    },
+    //about us
+    {
+        path: 'about-us',
+        component: AboutUsComponent
+    },
+    //contact
+    {
+        path: 'contact',
+        component: ContactComponent
     },
     
 ];

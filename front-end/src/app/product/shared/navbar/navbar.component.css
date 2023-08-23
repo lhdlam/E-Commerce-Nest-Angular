@@ -102,12 +102,18 @@
     .menu-items li {
         float: left;
         display: block;
+        
         font-weight: 700;
         padding: 8px 20px;
         text-decoration: none;
         color: white;
     }
-   
+
+    .menu-items:hover {
+        color: black;
+        cursor: pointer;
+    }
+    
     .nav-bar-menu {
         display: none;
         

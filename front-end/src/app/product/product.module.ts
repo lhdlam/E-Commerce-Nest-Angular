@@ -17,6 +17,8 @@ import { ProductAccessoriesComponent } from './product-accessories/product-acces
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductTravelComponent } from './product-travel/product-travel.component';
+import { AboutUsComponent } from './shared/about-us/about-us.component';
+import { ContactComponent } from './shared/contact/contact.component';
 
 
 
@@ -38,6 +40,8 @@ import { ProductTravelComponent } from './product-travel/product-travel.componen
     ProductCreateComponent,
     ProductEditComponent,
     ProductTravelComponent,
+    AboutUsComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,
